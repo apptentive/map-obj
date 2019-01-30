@@ -31,7 +31,7 @@ module.exports = function mapObj(object, fn, options, seen) {
 	}
 
 	/// TODO: Use `Object.entries()` when targeting Node.js 8
-	for (const key of Object.keys(object)) {
+	for (let key of Object.keys(object)) {
 		const value = object[key];
 		let [newKey, newValue] = fn(key, value, object);
 
